@@ -60,6 +60,65 @@ a:hover:not(.active) {
 .active {
 background-color:#4CAF50;
 }
+
+.container {
+    overflow: hidden;
+    background-color: #333;
+    font-family: Arial;
+}
+
+.container a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;    
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+}
+
+.container a:hover, .dropdown:hover .dropbtn {
+    background-color: #4CAF50;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: grey;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
 </style>
 
 </head>
@@ -76,21 +135,45 @@ background-color:#4CAF50;
 		<img src="phonepic3.jpeg" alt="pic" height="100" width="150" align="center"> 
 		<img src="laptoppic1.jpeg" alt="pic" height="100" width="150" align="center"> 
 		<img src="phonepic4.jpeg" alt="pic" height="100" width="150" align="center"> 
-		<img src="phonepic5.jpeg" alt="pic" height="100" width="150" align="center">
+		<img src="phonepic5.jpeg" alt="pic" height="100" width="145" align="center">
 	</header>
 
 <ul>
   <li><a class="active" href="cz92.github.io">Home</a></li>
-  <li><a href="services.html">Services</a></li>
+  <!--<li><a href="services.html">Services</a></li>-->
   <li><a href="News.html">News</a></li>
   <li><a href="cz92investment.html">Investment</a></li>
-   
+
+  
+  <div class="dropdown">
+    <button class="dropbtn">Catalogue</button>
+    <div class="dropdown-content">
+      <a href="compsandaccess.html">Computers and Accessories</a>
+      <a href="#">Phones and Accessories</a>
+      <a href="#"></a>
+      <a href="#"></a>
+
+    </div>
+
+  </div> 
+            <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+">
+<input type="image" src="https://www.paypalobjects.com/en_GB/i/btn/btn_viewcart_SM.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+</form>
+</div>
+
+
+</div> 
+
 </ul>	
 
-<h1 align="center"></h1>
-<P align="center"></P>
-<p align="center"></p>
-<p align="center"></p>
+<h1 align="center">CZs Catalogue</h1>
+<P align="center">Welcome</P>
+<p align="center">Here you will find a veriety of products</p>
+<p align="center">with more being added everyday!</p>
 <p align="center"></p>
 <p align="center"></p>
 <h2 align="center"><b><u></u></b></h2>
@@ -103,20 +186,30 @@ background-color:#4CAF50;
 		<th></th>
 		<th></th>
 	</tr>
-	<tr>
-		<td><img src="" alt="pic" height="150" width="150" float="center">  </td>
-		<td></td>
-		<td><p align="center"></p></td>
+<tr>
+		<td><img src="msi1080.jpg" alt="pic" height="150" width="150" float="center">  </td>
+		<td>MSI VR Ready GT83VR Titan SLI-024 18.4" Extreme Gaming Laptop GTX 1080 Dual SLI i7-6920HQ 64GB 1TB SSD + 1TB Win10</td>
+		<td>Price £3950 pre order only, Free P&P.<p align="center"> </td>
 	</tr>
 	<tr>
-		<td><img src="" alt="pic" height="150" width="150" float="center"> product name </td>
-		<td></td>
-		<td><p align="center"></p></td>
+		<td><img src="sclassphonecase.jpg" alt="pic" height="150" width="150" float="center">  </td>
+		<td>sclass phone case new <u>http://www.ebay.co.uk/itm/phone-case-iphone-6-/152547631391?ssPageName=STRK:MESE:IT</u></td>
+		<td>Price: £2.90 p&p: £1.30</td>
 	</tr>
 	<tr>
 		<td><img src="fidgetspinner1.jpeg" alt="pic" height="150" width="150" float="center"> !!!Wholesale & large quantity orders only!!!</td>
 		<td>Fidget spinners multiple designs available, wholesale and large quantity orders only for quote's please Email <u>cz92.ws@gmail.com</u> </td>
-		<td>Price available on request</td>
+		<td>Price available on request <!--query form-->
+	<form action="https://formspree.io/cz92.ws@gmail.com" method="POST"> 
+	Query
+	<input type="text" name="name">
+	Email adress
+	<input type="email"
+	name="_replyto">
+	
+	<input type="submit" value="send">
+	</form> 
+	</td>
 	</tr>
 
 
